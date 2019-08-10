@@ -23,6 +23,7 @@ class Searchbox extends React.Component {
                     query: query,
                     typingTimeout: false
                 });
+                self.props.onInputChange(query);
             }, 500)
         });
     };
