@@ -1,0 +1,12 @@
+li.gif-list-item {
+    box-shadow: 2px 2px 4px 0 #ccc;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0 0 1.5em;
+    padding: 1em;
+    width: 100%;
+}
+
+li.gif-list-item img {
+    width: 100%;
+}
