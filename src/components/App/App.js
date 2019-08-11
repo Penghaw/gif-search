@@ -5,6 +5,7 @@ import Searchbox from '../Searchbox';
 import GifList from '../GifList';
 import Giphy from '../../services/Giphy';
 import LoadingSpinner from '../LoadingSpinner';
+import BackToTop from '../BackToTop';
 
 class App extends React.Component {
     constructor() {
@@ -64,6 +65,7 @@ class App extends React.Component {
                 <hr/>
                 <GifList gifList={this.state.gifList}/>
                 <LoadingSpinner isLoading={this.state.isLoading}/>
+                <BackToTop/>
             </div>
         );
     }
