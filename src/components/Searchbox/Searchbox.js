@@ -31,7 +31,7 @@ class Searchbox extends React.Component {
     render() {
         return (
             <div>
-                <input className="searchGif" onChange={this.onInputChange}/>
+                <input className="searchGif" placeholder="Find GIF here!" onChange={this.onInputChange}/>
             </div>
         );
     }

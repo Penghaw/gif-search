@@ -1,10 +1,11 @@
 li.gif-list-item {
-    box-shadow: 2px 2px 4px 0 #ccc;
+    box-shadow: 2px 2px 4px 0 #000000;
     box-sizing: border-box;
     display: inline-block;
     margin: 0 0 1.5em;
     padding: 1em;
     width: 100%;
+    background-color: lightgray;
 }
 
 li.gif-list-item img {
