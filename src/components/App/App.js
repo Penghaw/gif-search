@@ -60,7 +60,7 @@ class App extends React.Component {
     render() {
         return (
             <div className="app">
-                <h1 className="pageTitle">Gif Search</h1>
+                <h1 className="pageTitle">GIF Search</h1>
                 <Searchbox onInputChange={this.handleInputChange}/>
                 <hr/>
                 <GifList gifList={this.state.gifList}/>
