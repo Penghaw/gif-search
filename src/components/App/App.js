@@ -53,6 +53,7 @@ class App extends React.Component {
 
     componentDidMount() {
         window.addEventListener("scroll", this.scrollWatcher);
+        this.handleInputChange();
     }
 
     render() {

@@ -35,12 +35,12 @@ class Giphy extends React.Component {
 
     static async searchGif(keyword, limit, offset) {
         let data = {
-            q: keyword,
+            q: (typeof keyword !== undefined ? null : keyword),
             limit: (typeof limit !== undefined && !isNaN(limit)) ? limit : 25,
             offset: (typeof offset !== undefined && !isNaN(offset)) ? offset : 0,
             lang: 'en'
         };
-        let response = await Giphy.callServer('search', data);
+        let response = await Giphy.callServer(typeof keyword !== undefined ? 'search' : 'trending', data);
         if (response.status === true) {
             let dataList = response.data.data;
             let gifList = [];
