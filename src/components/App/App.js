@@ -4,13 +4,15 @@ import '../../helpers/constants.js';
 import Searchbox from '../Searchbox';
 import GifList from '../GifList';
 import Giphy from '../../services/Giphy';
+import LoadingSpinner from '../LoadingSpinner';
 
 class App extends React.Component {
     constructor() {
         super();
 
         this.state = {
-            gifList: []
+            gifList: [],
+            isLoading: false
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -18,15 +20,18 @@ class App extends React.Component {
     }
 
     async handleInputChange(query) {
-        this.setState({gifList: await Giphy.searchGif(query)});
+        this.setState({isLoading: true});
+        let gifList = await Giphy.searchGif(query);
+        this.setState({gifList: gifList, isLoading: false});
     };
 
     async handleScrollBottom() {
         if (this.state.gifList.length >= 0) {
+            this.setState({isLoading: true});
             let gifList = await Giphy.searchGif(1, 25, this.state.gifList.length);
             this.setState(state => {
                 const list = state.gifList.concat(gifList);
-                return {gifList: list};
+                return {gifList: list, isLoading: false};
             })
         }
     }
@@ -57,6 +62,7 @@ class App extends React.Component {
                 <Searchbox onInputChange={this.handleInputChange}/>
                 <hr/>
                 <GifList gifList={this.state.gifList}/>
+                <LoadingSpinner isLoading={this.state.isLoading}/>
             </div>
         );
     }
