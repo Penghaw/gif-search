@@ -17,8 +17,7 @@ To run the app, simply enter the command<br/>
 <code>npm start</code>
 <br/>
 And the app should accessible on your 
-
-[http://localhost:3000](http://localhost:3000)
+<code>[http://localhost:3000](http://localhost:3000)</code>
 
 ### Things to note: 
 <ul>
