@@ -1,7 +1,12 @@
 ### Summary
 gif-search is a simple web app built in react.js to help users find related gif.
 <br/>
-The app also has an infinite-loading feature which allows you to continue scrolling until you find the perfect gif. 
+This app has: 
+<ul>
+    <li>infinite-scrolling</li>
+    <li>back-to-top button</li>
+    <li>shows trending GIF by default or on empty search query</li>
+</ul> 
 
 ### Project Structure
 The project structure is divided within the src folder as follows;:
